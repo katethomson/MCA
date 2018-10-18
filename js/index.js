@@ -20,4 +20,4 @@ options = {
 vrvToolkit.setOptions(options)
 
 /* Show the score */
-showScore('score', 'I Giorni.mei') // <-- CHANGE THIS TO YOUR FILE
+showScore('score', 'data/I Giorni.mei') // <-- CHANGE THIS TO YOUR FILE
