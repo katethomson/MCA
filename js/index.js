@@ -20,4 +20,4 @@ options = {
 vrvToolkit.setOptions(options)
 
 /* Show the score */
-showScore('score', '/Users/katethomson/Desktop/GitHub/MCA/data/example.mei') // <-- CHANGE THIS TO YOUR FILE
+showScore('score', 'example.mei') // <-- CHANGE THIS TO YOUR FILE
