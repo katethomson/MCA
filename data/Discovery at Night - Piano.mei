@@ -6,10 +6,58 @@
         <fileDesc>
             <titleStmt>
                 <title>Discovery at Night</title>
+                <date>2018</date>
+                <composer>Ludovico Einaudi</composer>
+                <respStmt>Encoded by</respStmt>
+                <respStmt>Kate Thomson</respStmt>
             </titleStmt>
-            <pubStmt></pubStmt>
+            <editionStmt>
+                <edition>Second Edition
+                    <date>2018</date>
+                    <respStmt>
+                        <resp>Transposed by</resp>
+                        <name>Kate Thomson</name>
+                    </respStmt>
+                </edition>
+            </editionStmt>
+            <extent unit="Page">4</extent> 
+            <pubStmt>
+                <publisher>
+                    <corpName>University of Glasgow Information Studies</corpName>
+                </publisher>
+                <address>
+                    <addrLine>
+                        <geogName>Glasgow</geogName>
+                    </addrLine>
+                    <addrLine>
+                        <geogName>United Kingdom</geogName>
+                    </addrLine>
+                </address>
+                <date>2018</date>
+            </pubStmt>
+            <seriesStmt>
+                <title>DMIS Music Analysis and Curation Encoded Music Collection</title>
+                <title type="subtitle">A comparison of two pieces written a decade apart by Ludovico Einaudi</title>
+                <editor>Kate Thomson</editor>
+                <identifier>MCA-2018</identifier>
+                <contents>
+                    <head>
+                        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"></meta>
+                    </head>
+                    <contentItem>I Giorni - Piano, 2001, Ludovico Einaudi</contentItem>
+                    <contentItem>I Giorni - Guitar, 2001, Ludovico Einaudi</contentItem>
+                    <contentItem>Discovery at Night - Piano, 2013, Ludovico Einaudi</contentItem>
+                    <contentItem>Discovery at Night - Guitar, 2013, Ludovico Einaudi</contentItem>
+                </contents>
+            </seriesStmt>
         </fileDesc>
-        <encodingDesc xml:id="encodingdesc-0000001875660492">
+        <encodingDesc xml:id="encodingdesc-0000000791118635">
+            <appInfo>
+                <application isodate="2018-11-04" version="2.3.2">
+                    <name>Musescore</name>
+                    <p>Used to transcribe and export</p>
+                </application>
+            </appInfo>"
             <appInfo xml:id="appinfo-0000000573511322">
                 <application xml:id="application-0000001227159155" isodate="2018-11-04T14:42:12" version="2.0.0-dev-c0ae726">
                     <name xml:id="name-0000001777912082">Verovio</name>
@@ -17,6 +65,21 @@
                 </application>
             </appInfo>
         </encodingDesc>
+        <workDesc>
+            <work>
+                <title>Discovery at Night</title>
+                <!--incipCode contains the first four notes of the treble clef in Plaine & Easie Code for identification-->
+                <incip>F,D,F</incip>
+                <key>D Major</key>
+                <tempo type="BPM">60</tempo>
+                <creation>
+                    <date>2013</date>
+                </creation> 
+            </work>
+            <perfResList>
+                <perfRes solo="true">Piano</perfRes>
+            </perfResList>
+        </workDesc>
     </meiHead>
     <music>
         <body>
