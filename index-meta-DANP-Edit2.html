@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>My Music Encoding Project</title>
+    <meta charset="utf-8">
+    <meta name="description" content="My project">
+    <meta name="author" content="Me">
+    <link rel="stylesheet" href="css/style.css" media="all" />
+    <script src="js/verovio-toolkit.js"></script>
+    <script src="js/utils.js"></script>
+  </head>
+
+  <body>
+
+    <div id="content">
+      <!-- ADD YOUR HTML CONTENT HERE! -->
+      <h1>My project</h1>
+      <h2>Metadata</h2>
+	<p><b>Title:</b> I Giorni<br/>
+		<b>Arranger:</b> Giuppi D'Amico<br/>
+		<b>Date:</b> 2018<br/>
+		<b>Composer:</b> Ludovico Einaudi<br/>
+		<b>Encoder:</b> Kate Thomson<br/>
+	</p>
+	<p>
+		<b>Edition:</b> Second<br/>
+		<b>Date:</b> 2018<br/>
+		<b>Revised by:</b> Kate Thomson<br/>
+	</p>
+	<p>
+		<b>Length:</b> 6 pages<br/>
+		<b>Publisher:</b> University of Glasgow Information Studies<br/>
+		<b>Publisher address:</b> Glasgow, United Kingdom<br/>
+		<b>Date:</b>2018<br/>
+		<b>Availability:</b> https://musescore.com/user/12157896/scores/3365996
+		<b>Authority:</b> MuseScore<br/>
+	            </editionStmt>
+	</p>
+	<p>
+		<b>Series:</b> DMIS Music Analysis and Curation Encoded Music Collection<br/>
+		<b>Title:</b> A comparison of two solo piano pieces written a decade apart by Ludovico Einaudi<br/>
+		<b>Editor:</b> Kate Thomson <br/>
+		<b>Identifier:</b> MCA-2018<br/>
+		<b>Contents:</b> 
+			<ol>
+				<li>I Giorni - Piano, 2001, Ludovico Einaudi</li>
+				<li>I Giorni - Guitar, 2001, Ludovico Einaudi</li>
+				<li>Discovery at Night - Piano, 2013, Ludovico Einaudi</li>
+				<li>Discovery at Night - Guitar, 2013, Ludovico Einaudi</li>
+			</ol>
+	</p>
+	<p>
+		<b>Applications:<b> Musescore (used to transcribe and export)<br/>
+					Verovio (used to export and display)
+	</p>
+	<p>
+		<b>First four notes of the treble clef:</b> D, C, C, B<br/>
+		<b>Key:</b> D Major<br/>
+		<b>Tempo:</b> 120bpm<br/>
+		<b>Date of creation:</b> 2001<br/>
+		<b>Instrument:</b> Solo Piano<br/>
+</p>
+      <p id="meta"></p>
+
+    </div>
+
+    <!-- **** DO NO EDIT BELOW THIS LINE **** -->
+    <!-- * **** **** **** **** **** **** **** -->
+    <div id="controls">
+
+ <button id="prev">&lt;</button>
+
+ <button id="next">&gt;</button>
+
+</div>
+<div id="score">
+      <!-- THIS IS WHERE THE SCORE GOES AUTOMATICALLY -->
+    </div>
+    <!-- THIS CALLS THE SCRIPT THAT GETS THE MEI SCORE -->
+   <script src="js/indexDANPEdit2.js"></script>
+    <script>
+      var xhr = new XMLHttpRequest()
+      xhr.open('GET', 'data/Discovery at Night_PitchNames - Piano.mei') // <-- change this to the right file
+      xhr.send(null)
+
+      /* Deal with the response */
+      xhr.onreadystatechange = function () {
+        var DONE = 4
+        var OK = 200
+        if (xhr.readyState === DONE) {
+          if (xhr.status === OK) {
+            var parser = new DOMParser()
+            var meiDoc = parser.parseFromString(xhr.responseText,"text/xml")
+            /* If your element has an authURI attribute, copy the folloiwng line, being sure to replace the "MY-XML-ID" with your element's actual xml:id.
+            document.querySelector("#meta").innerHTML += "<a href=\"" + meiDoc.querySelector("[*|id='MY-XML-ID']").getAttribute('authURI') +"\"><p>" + meiDoc.querySelector("[*|id='MY-XML-ID']").textContent + "</p></a>"
+           */
+           /* If your element does not have an authURI attribute, copy the following line, being sure to replace the "MY-XML-ID" with your element's actual xml:id.
+            document.querySelector("#meta").innerHTML += "<p>" + meiDoc.querySelector("[*|id='m-8']").textContent + "</p>"
+            */
+          }
+        }
+      }
+    </script>
+  </body>
+
+</html>
