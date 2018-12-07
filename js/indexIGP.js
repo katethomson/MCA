@@ -1,6 +1,6 @@
 /* This script loads the MEI file via HTTP request */
 
-/* Start Verovio */
+/* Start Verovio  */
 var vrvToolkit = new verovio.toolkit()
 
 /* Setup Verovio - adjust the options below */
