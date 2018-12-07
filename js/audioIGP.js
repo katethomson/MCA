@@ -5,7 +5,7 @@ var xhr = new XMLHttpRequest()
 xhr.open('GET', 'data/I Giorni - Piano.mei') // <-- change this to the right file
 xhr.send(null)
 
-/* Deal with the response */
+/* Deal with the response  */
 xhr.onreadystatechange = function () {
   var DONE = 4
   var OK = 200
